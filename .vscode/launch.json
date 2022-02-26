@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "g++.exe - Build and debug storage.exe",
+            "name": "g++.exe - Build and debug storage.exe and Build TestInventory.exe",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}\\storage.exe",
