@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"label": "Build",
-			"dependsOn": ["C/C++: g++.exe build storage.exe", "C/C++: g++.exe build TestInventory.exe"]
+			"dependsOn": ["C/C++: g++.exe build storage.exe", "C/C++: g++.exe build testInventory.exe"]
 		},
 		{
 			"type": "cppbuild",
