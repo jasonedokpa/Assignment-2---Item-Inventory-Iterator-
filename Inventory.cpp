@@ -68,7 +68,8 @@ int Inventory::totalSlots() const
 bool Inventory::isFull() const
 {
 	// @todo - implement this function
-	return false; // replace this line
+
+	return !(allItemStacks.size() < slots);
 }
 
 //------------------------------------------------------------------------------
@@ -103,6 +104,15 @@ void Inventory::display(std::ostream &outs) const
 	// @todo - implement the rest of function
 	//
 	// 2 spaces "  " before each ItemStack line
+
+	const_iterator itemStackIterator = (*this).begin();
+	while (itemStackIterator != (*this).end())
+	{
+		outs << "  " << *itemStackIterator << std::endl;
+
+		itemStackIterator++;
+	}
+
 }
 
 
@@ -111,6 +121,17 @@ Inventory::iterator Inventory::findMatchingItemStackIterator(const ItemStack& it
 {
 	// @todo - implement this function
 
+	iterator itemStackIterator = (*this).begin();
+	while (itemStackIterator != (*this).end())
+	{
+		if (*itemStackIterator == itemStack)
+		{
+			return itemStackIterator;
+		}
+
+		itemStackIterator++;
+	}
+
 	return allItemStacks.end();
 }
 
@@ -118,6 +139,8 @@ Inventory::iterator Inventory::findMatchingItemStackIterator(const ItemStack& it
 void Inventory::addItemStackNoCheck(ItemStack itemStack)
 {
 	// @todo - implement this function. This should be one push_back-y line...
+	
+	 allItemStacks.push_back(itemStack);
 }
 
 //------------------------------------------------------------------------------
@@ -174,4 +197,6 @@ void Inventory::mergeStacks(ItemStack& lhs, const ItemStack& rhs)
 {
 	// @todo - implement this function. There is no trick here (beyond
 	// reviewing Assignment 1).
+
+	lhs.addItems(rhs.size());
 }

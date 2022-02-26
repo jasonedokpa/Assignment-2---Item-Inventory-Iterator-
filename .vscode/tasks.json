@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"label": "Build",
-			"dependsOn": ["C/C++: g++.exe build storage.exe", "C/C++: g++.exe build testInventory.exe"]
+			"dependsOn": ["C/C++: g++.exe build storage.exe", "C/C++: g++.exe build TestInventory.exe"]
 		},
 		{
 			"type": "cppbuild",
@@ -33,7 +33,7 @@
 		},
 		{
 			"type": "cppbuild",
-			"label": "C/C++: g++.exe build testInventory.exe",
+			"label": "C/C++: g++.exe build TestInventory.exe",
 			"command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
 			"args": [
 				"-g",
@@ -42,7 +42,7 @@
 				"${workspaceFolder}\\ItemStack.cpp",
 				"${workspaceFolder}\\TestInventory.cpp",
 				"-o",
-				"${workspaceFolder}\\testInventory.exe"
+				"${workspaceFolder}\\TestInventory.exe"
 			],
 			"options": {
 				"cwd": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin"
